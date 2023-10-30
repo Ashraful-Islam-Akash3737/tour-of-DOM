@@ -8,7 +8,7 @@
     <style>
         ul{
             color:rgb(13, 79, 222);
-        }
+        } 
         li{
             color: rgb(139, 218, 12);
         }
@@ -16,19 +16,63 @@
 </head>
 <body>
     <header>
-        <h1>WELLCOME TO THE WORLD OF <span>DOM</span></h1>
+        <h1 id="greetings-message">WELLCOME TO THE WORLD OF DOM</h1>
+        <p>dimilique commodi! Quas doloremque veniam cum rerum eaque dolores sapiente deserunt molestias numquam! dimilique commodi! Quas doloremque veniam cum rerum eaque dolores sapiente deserunt molestias numquam!</p>
     </header>
     <main>
-        <h1>Hi, there!</h1>
-        <ul>My friends name are given below:
-            <li>sayem</li>
-            <li>shajib</li>
-            <li>tipu</li>
-        </ul>
+        <section>
+            <h1>Hi, there!</h1>
+            <h1>My friends name are given below:</h1>
+            <ul>
+                <li>sayem</li>
+                <li>shajib</li>
+                <li>tipu</li>
+            </ul>
+        </section>
+        
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits name are given below:</h1>
+            <ul>
+                <li class="fruits-item">mango</li>
+                <li class="fruits-item">banana</li>
+                <li class="fruits-item">litchi</li>
+            </ul>
+        </section>
+        <section>
+            <h1 class="holy-places">Places i like to visit:</h1>
+            <ul>
+                <li>Makka</li>
+                <li>Madina</li>
+                <li>Al-aksa</li>
+            </ul>
+        </section>
+    
     </main>
     <script src="js/dom.js"></script>
     <script>
         console.log("do you know who i am?");
+        const allHeadings = document.getElementsByTagName("h1");
+        for(const h1 of allHeadings){
+            //console.log(h1.innerText);
+        }
+        const allLi = document.getElementsByTagName("li");
+        for(const li of allLi){
+            //console.log(li.innerText);
+        }
+        const fruits = document.getElementById("fruits-title").innerText = "my favourite fruits:";
+        
+        // console.log(fruits);
+        for(const fruit of fruits){
+            console.log(fruits);
+        }
+        
+        const fruitsItem = document.getElementsByClassName("fruits-item");
+        for(let fruitItems of fruitsItem){
+            console.log(fruitItems.innerText);
+
+
+        }
+        
     </script>
 </body>
 </html>
